@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>contraco - Global Transformation Consulting</title>
     
+    <!-- Canonical Tag -->
+    <link rel="canonical" href="https://contraco.com/">
+    
+    <!-- Robots Meta Tag -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- Complete hreflang for International SEO -->
+    <link rel="alternate" href="https://contraco.com/" hreflang="x-default" />
+    <link rel="alternate" hreflang="en" href="https://contraco.net/" />
+    <link rel="alternate" hreflang="de" href="https://contraco.de/" />
+    <link rel="alternate" hreflang="ru" href="https://contraco.ru/" />
+    <link rel="alternate" hreflang="ko" href="https://contraco.co.kr/" />
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-868WGCC45D"></script>
     <script>
@@ -20,7 +33,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-   <!-- ADDED: Complete Favicon Set all needed sizes -->
+    <!-- COMPLETE Favicon Set -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -40,22 +53,40 @@
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
     <meta name="theme-color" content="#e62d00">
     
-    <!-- hreflang for International SEO -->
-    <link rel="alternate" hreflang="en" href="https://contraco.net/" />
-    <link rel="alternate" hreflang="de" href="https://contraco.de/" />
-    <link rel="alternate" hreflang="ru" href="https://contraco.ru/" />
-    <link rel="alternate" hreflang="ko" href="https://contraco.co.kr/" />
-    <link rel="alternate" hreflang="x-default" href="https://contraco.net/" />
-    
     <!-- SEO Meta Tags -->
-    <meta name="description" content="contraco - Global transformation consulting with 27+ years of expertise. Available in Americas, Europe and Asian markets, .">
-    <meta name="keywords" content="transformation consulting, digital transformation, global consulting, contraco">
+    <meta name="description" content="contraco - Premium transformation consulting. 27+ years of digital excellence. Choose your market: US (English), Germany (Deutsch), Russia (Русский), Korea (한국어).">
+    <meta name="keywords" content="transformation consulting, digital transformation, AI consulting, contraco, global consulting">
+    <meta name="author" content="contraco">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://contraco.com/">
     <meta property="og:title" content="contraco - Global Transformation Consulting">
-    <meta property="og:description" content="Transformation veterans serving global markets since 1998. Choose your market to begin.">
+    <meta property="og:description" content="Premium transformation consulting. Choose your market and language. 27+ years of digital excellence.">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "contraco",
+        "url": "https://contraco.com/",
+        "logo": "https://contraco.com/Logo_rectangle.svg",
+        "description": "Premium transformation consulting combining strategic clarity, technological intelligence, and psychological depth.",
+        "email": "mailto:transformation@contraco.net",
+        "telephone": "+1-312-940-0326",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1209 10th Ln.",
+            "addressLocality": "Ava",
+            "addressRegion": "MO",
+            "postalCode": "65608",
+            "addressCountry": "US"
+        },
+        "foundingDate": "1998",
+        "areaServed": ["United States", "Germany", "Russia", "Korea", "Global"]
+    }
+    </script>
     
     <style>
         /* CSS Variables */
@@ -66,8 +97,10 @@
             --warm-gray-light: #E5E2DD;
             --warm-gray-medium: #A8A5A0;
             --warm-gray-dark: #6B6B6B;
-            --font-serif: 'Crimson Text', Georgia, 'Times New Roman', serif;
+            --font-serif: 'Crimson Text', Georgia, serif;
             --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.08);
+            --shadow-hover: 0 20px 60px rgba(0, 0, 0, 0.15);
         }
 
         /* Reset */
@@ -79,359 +112,307 @@
 
         body {
             font-family: var(--font-sans);
-            background: linear-gradient(135deg, var(--warm-white) 0%, #faf8f5 100%);
+            line-height: 1.6;
+            color: var(--deep-charcoal);
+            background: linear-gradient(135deg, var(--warm-white) 0%, var(--warm-gray-light) 100%);
             min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 20px;
         }
 
-        .hub-container {
-            max-width: 900px;
-            width: 100%;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            position: relative;
-        }
-
-        .hub-header {
-            background: var(--deep-charcoal);
-            color: white;
-            padding: 60px 40px;
+        /* FIXED HEADER DESIGN */
+        .header {
+            background: var(--warm-white);
+            padding: 40px 0 60px;
             text-align: center;
-            position: relative;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            margin-bottom: 80px;
         }
 
-        .hub-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--primary-red);
-        }
-
-        .contraco-logo {
-            margin-bottom: 20px;
-            display: flex;
-            justify-content: center;
+        .logo {
+            display: inline-flex;
             align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
         }
 
-        .contraco-logo img {
-            height: 60px;
+        .logo img {
+            height: 50px;
             width: auto;
-            transition: transform 0.3s ease;
+            transition: opacity 0.3s ease;
         }
 
-        .contraco-logo:hover img {
-            transform: scale(1.05);
-        }
-
-        /* Logo Fallback Styling */
         .logo-fallback {
-            font-family: var(--font-serif);
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary-red);
             letter-spacing: -0.02em;
-            display: none; /* Hidden by default */
-        }
-
-        /* When logo fails to load */
-        .contraco-logo.logo-failed img {
+            font-family: var(--font-serif);
             display: none;
         }
 
-        .contraco-logo.logo-failed .logo-fallback {
+        .logo.logo-failed img {
+            display: none;
+        }
+
+        .logo.logo-failed .logo-fallback {
             display: block;
         }
 
-        .hub-tagline {
-            font-size: 1.3rem;
-            color: var(--warm-gray-light);
-            margin-bottom: 10px;
+        .header-title {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--deep-charcoal);
+            margin-bottom: 8px;
+            font-family: var(--font-sans);
+        }
+
+        .header-subtitle {
+            font-size: 1.1rem;
+            color: var(--warm-gray-dark);
             font-weight: 300;
         }
 
-        .hub-subtitle {
-            font-size: 1rem;
-            color: var(--warm-gray-medium);
-            font-weight: 400;
+        /* Main Content */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 40px;
         }
 
-        .market-selection {
-            padding: 50px 40px;
-        }
-
-        .selection-title {
+        .market-selector {
             text-align: center;
-            font-size: 1.8rem;
-            color: var(--deep-charcoal);
-            margin-bottom: 15px;
+        }
+
+        .selector-title {
+            font-size: 2.5rem;
             font-weight: 600;
+            color: var(--deep-charcoal);
+            margin-bottom: 16px;
+            font-family: var(--font-serif);
         }
 
-        .selection-subtitle {
-            text-align: center;
+        .selector-subtitle {
+            font-size: 1.2rem;
             color: var(--warm-gray-dark);
-            margin-bottom: 40px;
-            font-size: 1.1rem;
+            margin-bottom: 60px;
+            font-weight: 300;
         }
 
         .markets-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
-            max-width: 700px;
-            margin: 0 auto;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .market-card {
-            background: var(--warm-white);
-            border: 2px solid var(--warm-gray-light);
+            background: white;
             border-radius: 12px;
-            padding: 30px 20px;
-            text-align: center;
+            padding: 40px 30px;
             text-decoration: none;
-            color: var(--deep-charcoal);
+            color: inherit;
             transition: all 0.3s ease;
+            box-shadow: var(--shadow-medium);
+            border: 2px solid transparent;
             position: relative;
             overflow: hidden;
         }
 
-        .market-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(230, 45, 0, 0.1), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .market-card:hover::before {
-            left: 100%;
-        }
-
         .market-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
             border-color: var(--primary-red);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(230, 45, 0, 0.15);
+            text-decoration: none;
+            color: inherit;
         }
 
-        .market-flag {
+        .market-card.featured {
+            border-color: var(--primary-red);
+            background: linear-gradient(135deg, white 0%, rgba(230, 45, 0, 0.02) 100%);
+        }
+
+        .market-code {
             font-size: 3rem;
-            margin-bottom: 15px;
-            display: block;
+            font-weight: 700;
+            color: var(--deep-charcoal);
+            margin-bottom: 12px;
+            font-family: var(--font-serif);
         }
 
         .market-name {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 8px;
             color: var(--deep-charcoal);
+            margin-bottom: 8px;
         }
 
         .market-language {
             font-size: 1rem;
-            color: var(--warm-gray-dark);
-            margin-bottom: 12px;
+            color: var(--warm-gray-medium);
+            margin-bottom: 16px;
         }
 
-        .market-domain {
+        .market-url {
             font-size: 0.9rem;
             color: var(--primary-red);
             font-weight: 500;
-            font-family: monospace;
         }
 
-        .hub-footer {
-            background: var(--warm-gray-light);
-            padding: 30px 40px;
+        /* Footer */
+        .footer {
+            background: var(--deep-charcoal);
+            color: var(--warm-gray-light);
+            padding: 50px 0;
             text-align: center;
-            color: var(--warm-gray-dark);
-            font-size: 0.9rem;
         }
 
-        .global-info {
-            margin-bottom: 15px;
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px;
         }
 
-        .established {
-            font-weight: 600;
-            color: var(--deep-charcoal);
+        .footer-tagline {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: white;
         }
 
-        /* Responsive Design*/
+        .footer-description {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--warm-gray-medium);
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .hub-container {
-                margin: 10px;
-                border-radius: 15px;
+            .container,
+            .footer-content {
+                padding: 0 20px;
             }
 
-            .hub-header {
-                padding: 40px 30px;
+            .header {
+                padding: 30px 0 40px;
+                margin-bottom: 50px;
             }
 
-            .contraco-logo img {
-                height: 50px;
+            .header-title {
+                font-size: 1.4rem;
             }
 
-            .logo-fallback {
-                font-size: 2.5rem;
+            .header-subtitle {
+                font-size: 1rem;
             }
 
-            .hub-tagline {
+            .selector-title {
+                font-size: 2rem;
+            }
+
+            .selector-subtitle {
                 font-size: 1.1rem;
-            }
-
-            .market-selection {
-                padding: 40px 30px;
+                margin-bottom: 40px;
             }
 
             .markets-grid {
                 grid-template-columns: 1fr;
                 gap: 20px;
+                margin-bottom: 60px;
             }
 
             .market-card {
-                padding: 25px 15px;
+                padding: 30px 20px;
             }
 
-            .hub-footer {
-                padding: 25px 30px;
+            .market-code {
+                font-size: 2.5rem;
             }
-        }
-
-        @media (max-width: 480px) {
-            .contraco-logo img {
-                height: 40px;
-            }
-            
-            .logo-fallback {
-                font-size: 2rem;
-            }
-
-            .selection-title {
-                font-size: 1.5rem;
-            }
-        }
-
-        /* Loading animation */
-        .market-card:active {
-            transform: scale(0.98);
-        }
-
-        /* Auto-redirect notice */
-        .auto-redirect {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: var(--primary-red);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            display: none;
-            z-index: 1000;
         }
     </style>
 </head>
 <body>
-    <!-- Auto-redirect notification -->
-    <div id="autoRedirect" class="auto-redirect">
-        Redirecting to your preferred market...
-    </div>
-
-    <div class="hub-container">
-        <!-- Header -->
-        <header class="hub-header">
-            <div class="contraco-logo" id="hub-logo">
-                <img src="https://contraco.net/Logo_rectangle.svg" 
+    <!-- FIXED HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="logo" id="site-logo">
+                <img src="https://contraco.com/Logo_rectangle.svg" 
                      alt="contraco" 
                      onerror="this.parentElement.classList.add('logo-failed');">
                 <span class="logo-fallback">contraco</span>
             </div>
-            <p class="hub-tagline">Global Transformation Consulting</p>
-            <p class="hub-subtitle">27+ Years of Digital Excellence</p>
-        </header>
+            <h1 class="header-title">Global Transformation Consulting</h1>
+            <p class="header-subtitle">27+ Years of Digital Excellence</p>
+        </div>
+    </header>
 
-        <!-- Market Selection -->
-        <main class="market-selection">
-            <h2 class="selection-title">Choose Your Market</h2>
-            <p class="selection-subtitle">Select your preferred language and regional site</p>
-            
-            <div class="markets-grid">
-                <!-- English Market -->
-                <a href="https://contraco.net" class="market-card" data-market="en">
-                    <span class="market-flag">🇺🇸</span>
-                    <div class="market-name">Global</div>
-                    <div class="market-language">English</div>
-                    <div class="market-domain">contraco.net</div>
-                </a>
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <section class="market-selector">
+                <h2 class="selector-title">Choose Your Market</h2>
+                <p class="selector-subtitle">Select your preferred language and regional site</p>
+                
+                <div class="markets-grid">
+                    <a href="https://contraco.net/" class="market-card featured">
+                        <div class="market-code">US</div>
+                        <div class="market-name">Global</div>
+                        <div class="market-language">English</div>
+                        <div class="market-url">contraco.net</div>
+                    </a>
+                    
+                    <a href="https://contraco.de/" class="market-card">
+                        <div class="market-code">DE</div>
+                        <div class="market-name">Deutschland</div>
+                        <div class="market-language">Deutsch</div>
+                        <div class="market-url">contraco.de</div>
+                    </a>
+                    
+                    <a href="https://contraco.ru/" class="market-card">
+                        <div class="market-code">RU</div>
+                        <div class="market-name">Россия</div>
+                        <div class="market-language">Русский</div>
+                        <div class="market-url">contraco.ru</div>
+                    </a>
+                    
+                    <a href="https://contraco.co.kr/" class="market-card">
+                        <div class="market-code">KR</div>
+                        <div class="market-name">대한민국</div>
+                        <div class="market-language">한국어</div>
+                        <div class="market-url">contraco.co.kr</div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
 
-                <!-- German Market -->
-                <a href="https://contraco.de" class="market-card" data-market="de">
-                    <span class="market-flag">🇩🇪</span>
-                    <div class="market-name">Deutschland</div>
-                    <div class="market-language">Deutsch</div>
-                    <div class="market-domain">contraco.de</div>
-                </a>
-
-                <!-- Russian Market -->
-                <a href="https://contraco.ru" class="market-card" data-market="ru">
-                    <span class="market-flag">🇷🇺</span>
-                    <div class="market-name">Россия</div>
-                    <div class="market-language">Русский</div>
-                    <div class="market-domain">contraco.ru</div>
-                </a>
-
-                <!-- Korean Market -->
-                <a href="https://contraco.co.kr" class="market-card" data-market="ko">
-                    <span class="market-flag">🇰🇷</span>
-                    <div class="market-name">대한민국</div>
-                    <div class="market-language">한국어</div>
-                    <div class="market-domain">contraco.co.kr</div>
-                </a>
-            </div>
-        </main>
-
-        <!-- Footer -->
-        <footer class="hub-footer">
-            <div class="global-info">
-                <span class="established">Established 1998</span> • Premium Transformation Consulting
-            </div>
-            <div>Strategic Clarity • Technological Intelligence • Psychological Depth</div>
-        </footer>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-tagline">Established 1998 • Premium Transformation Consulting</div>
+            <div class="footer-description">Strategic Clarity • Technological Intelligence • Psychological Depth</div>
+        </div>
+    </footer>
 
     <script>
-        // Logo fallback with retry mechanism
+        // Enhanced logo fallback with retry mechanism
         (function() {
-            const logo = document.getElementById('hub-logo');
+            const logo = document.getElementById('site-logo');
             const logoImg = logo.querySelector('img');
             let retryCount = 0;
             const maxRetries = 2;
             
-            // Function to handle logo load errors
             function handleLogoError() {
                 if (retryCount < maxRetries) {
                     retryCount++;
                     setTimeout(() => {
-                        logoImg.src = 'https://contraco.net/Logo_rectangle.svg';
+                        logoImg.src = 'https://contraco.com/Logo_rectangle.svg';
                     }, 1000 * retryCount);
                 } else {
                     logo.classList.add('logo-failed');
                 }
             }
             
-            // Check if logo loads successfully
             if (logoImg.complete && logoImg.naturalHeight === 0) {
                 handleLogoError();
             }
@@ -443,69 +424,20 @@
             });
         })();
 
-        // Smart redirect based on browser language
-        function getPreferredMarket() {
-            const browserLang = navigator.language || navigator.userLanguage;
-            const lang = browserLang.toLowerCase();
-            
-            if (lang.includes('de')) return 'de';
-            if (lang.includes('ru')) return 'ru'; 
-            if (lang.includes('ko')) return 'ko';
-            return 'en';
-        }
-
-        // Auto-redirect functionality (optional)
-        function enableAutoRedirect() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const autoRedirect = urlParams.get('auto');
-            
-            if (autoRedirect === 'true') {
-                const preferredMarket = getPreferredMarket();
-                const marketUrls = {
-                    'en': 'https://contraco.net',
-                    'de': 'https://contraco.de', 
-                    'ru': 'https://contraco.ru',
-                    'ko': 'https://contraco.co.kr'
-                };
-                
-                // Show notification
-                document.getElementById('autoRedirect').style.display = 'block';
-                
-                // Redirect after 2 seconds
-                setTimeout(() => {
-                    window.location.href = marketUrls[preferredMarket];
-                }, 2000);
-            }
-        }
-
-        // Market selection tracking
-        document.querySelectorAll('.market-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                const market = this.getAttribute('data-market');
-                
-                // Track selection in analytics
-                if (typeof gtag !== 'undefined') {
+        // Track market selections for analytics
+        if (typeof gtag !== 'undefined') {
+            document.querySelectorAll('.market-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const market = this.querySelector('.market-code').textContent;
+                    const url = this.href;
                     gtag('event', 'market_selection', {
-                        'market': market,
-                        'source': 'international_hub'
+                        event_category: 'navigation',
+                        event_label: market,
+                        value: url
                     });
-                }
+                });
             });
-        });
-
-        // Initialize
-        document.addEventListener('DOMContentLoaded', function() {
-            // Highlight preferred market based on browser language
-            const preferredMarket = getPreferredMarket();
-            const preferredCard = document.querySelector(`[data-market="${preferredMarket}"]`);
-            if (preferredCard) {
-                preferredCard.style.borderColor = 'var(--primary-red)';
-                preferredCard.style.boxShadow = '0 8px 25px rgba(230, 45, 0, 0.1)';
-            }
-            
-            // Enable auto-redirect if specified
-            enableAutoRedirect();
-        });
+        }
     </script>
 </body>
 </html>
