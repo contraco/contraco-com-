@@ -1,0 +1,25 @@
+{
+  "name": "contraco-website",
+  "version": "2.0.0",
+  "description": "contraco website built with 11ty static site generator",
+  "scripts": {
+    "clean": "rm -rf _site",
+    "build": "npm run clean && eleventy",
+    "serve": "eleventy --serve",
+    "start": "npm run serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "keywords": [
+    "11ty",
+    "eleventy",
+    "static-site"
+  ],
+  "author": "contraco",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}
