@@ -286,6 +286,24 @@
             color: var(--warm-gray-medium);
         }
 
+        .footer-links {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(168, 165, 160, 0.3);
+        }
+
+        .footer-links a {
+            color: var(--warm-gray-medium);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+            text-decoration: underline;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .container,
@@ -391,6 +409,9 @@
         <div class="footer-content">
             <div class="footer-tagline">Established 1998 • Premium Transformation Consulting</div>
             <div class="footer-description">Strategic Clarity • Technological Intelligence • Psychological Depth</div>
+            <div class="footer-links">
+                <a href="/privacy-statement.html">Privacy Statement</a>
+            </div>
         </div>
     </footer>
 
