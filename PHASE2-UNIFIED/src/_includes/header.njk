@@ -1,0 +1,27 @@
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="{{ site.url }}" class="logo" id="site-logo">
+            <img src="{{ site.url }}/Logo_rectangle.svg"
+                 alt="contraco"
+                 onerror="this.parentElement.classList.add('logo-failed');">
+            <span class="logo-fallback">contraco</span>
+        </a>
+        <div style="display: flex; align-items: center;">
+            <ul class="nav-menu">
+                {% for item in navigation %}
+                <li><a href="{{ item.url }}">{{ item.text }}</a></li>
+                {% endfor %}
+            </ul>
+
+            <!-- Language Selector -->
+            {% if site.showLanguageSelector %}
+            <div class="language-selector">
+                <a href="https://contraco.net/" title="English">EN</a>
+                <a href="https://contraco.de/" title="Deutsch">DE</a>
+                <a href="https://contraco.ru/" title="Русский">RU</a>
+                <a href="https://contraco.co.kr/" title="한국어">KR</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</nav>
