@@ -286,22 +286,41 @@
             color: var(--warm-gray-medium);
         }
 
-        .footer-links {
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(168, 165, 160, 0.3);
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+            text-align: center;
         }
 
-        .footer-links a {
+        .footer-bottom p {
+            margin: 0;
+            color: var(--warm-gray-light);
+            font-size: 0.9rem;
+        }
+
+        .footer-privacy-links {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .footer-privacy-links a {
             color: var(--warm-gray-medium);
             text-decoration: none;
             font-size: 0.85rem;
             transition: color 0.3s ease;
         }
 
-        .footer-links a:hover {
+        .footer-privacy-links a:hover {
             color: var(--primary-red);
-            text-decoration: underline;
+        }
+
+        .trademark-notice {
+            margin-top: 8px;
+            font-size: 0.8rem;
+            opacity: 0.8;
         }
 
         /* Responsive Design */
@@ -406,11 +425,17 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-tagline">Established 1998 • Premium Transformation Consulting</div>
-            <div class="footer-description">Strategic Clarity • Technological Intelligence • Psychological Depth</div>
-            <div class="footer-links">
-                <a href="/privacy-statement.html">Privacy Statement</a>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-tagline">Established 1998 • Premium Transformation Consulting</div>
+                <div class="footer-description">Strategic Clarity • Technological Intelligence • Psychological Depth</div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-privacy-links">
+                    <a href="/privacy-statement.html">Privacy Statement</a>
+                </div>
+                <p>&copy; 2025 contraco. All rights reserved.</p>
+                <p class="trademark-notice">The Resonance Method™ is a trademark of contraco.</p>
             </div>
         </div>
     </footer>
