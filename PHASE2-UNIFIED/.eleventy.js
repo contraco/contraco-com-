@@ -18,8 +18,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets-tld/**/robots.txt");
   eleventyConfig.addPassthroughCopy("src/assets-tld/**/sitemap.xml");
 
-  // Copy shared assets (common across all TLDs)
-  eleventyConfig.addPassthroughCopy("src/assets-shared");
+  // Copy shared assets (common across all TLDs) to root
+  eleventyConfig.addPassthroughCopy({ "src/assets-shared": "/" });
 
   // Create a shortcode for the current year
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
